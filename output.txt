@@ -1,0 +1,12 @@
+successfully connected
+The most popular three articles of all time are:
+('Candidate is jerk, alleges rival', 338647L)--->views
+('Bears love berries, alleges bear', 253801L)--->views
+('Bad things gone, say good people', 170098L)--->views
+The most popular authors of all time are:
+('Ursula La Multa', 507594L)--->views
+('Rudolf von Treppenwitz', 423457L)--->views
+('Anonymous Contributor', 170098L)--->views
+('Markoff Chaney', 84557L)--->views
+more than 1% of requests lead to errors
+(datetime.date(2016, 7, 17), Decimal('2.26'))--->errors
