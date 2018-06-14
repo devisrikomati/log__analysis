@@ -30,7 +30,7 @@ This is the third project log_analysis, Udacity Full Stack Nanodegree course usi
  ##In this first asked most popular three articles in all the time.for that i created view as 
  create view article_views as select title, author, count(title) as views from articles, log where log.path like concat('%',articles.slug) group by articles.title, articles.author order by views desc;
  ##Then asked most popular article all the time for that i wrote query as
- create view author_view as select name,count(articles.author) as views from articles, authors, log where log.path like concat('%',articles.slug) articles.author=authors.id group by authors.name order by views desc;
+ create view author_view as select name,count(articles.author) as views from articles, authors, log where log.path like concat('%',articles.slug) and articles.author=authors.id group by authors.name order by views desc;
   ##For calculate more than 1% 
   create view log_view as select date(time), round(100.0*sum(case log.status when '200 OK' then 0 else 1 end)/count(log.status),2) as Error_Percent from log group by date(time) order by Error_Percent desc;
   ##all of these commands run on vagrant.
